@@ -15,7 +15,7 @@ const CardColumnTwo = (props: ICardColumnTwo) => {
     videoId = videoId.substring(0, ampersandPosition);
   }
 
-  const src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  const src = `https://www.youtube.com/embed/${videoId}`;
 
   return (
     <iframe

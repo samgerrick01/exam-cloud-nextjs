@@ -59,7 +59,7 @@ const CardComponent = (props: ICardComponent) => {
             </div>
           )}
 
-          {play && <CardColumnTwo card={card} />}
+          {play && card.video[0]?.video?.url && <CardColumnTwo card={card} />}
         </div>
       </div>
     </div>
