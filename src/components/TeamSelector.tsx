@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
 import { IProps } from '@/src/interface';
+import { useState } from 'react';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { CardComponent, Selector, SelectorModal } from '.';
-import { FaChevronDown } from 'react-icons/fa';
 
 interface ITeamSelector {
   data: IProps;
@@ -47,7 +47,7 @@ const TeamSelector = (props: ITeamSelector) => {
           }}
           className='btn'
         >
-          {selectedTitle} <FaChevronDown />
+          {selectedTitle} {modalOpen ? <FaChevronUp /> : <FaChevronDown />}
         </button>
       </div>
       <SelectorModal

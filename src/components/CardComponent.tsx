@@ -1,9 +1,8 @@
 'use client';
 
-import React from 'react';
-import { IsubTeamCard } from '../interface';
-import { CardColumnOne, CardColumnTwo } from '.';
 import { motion } from 'framer-motion';
+import { CardColumnOne, CardColumnTwo } from '.';
+import { IsubTeamCard } from '../interface';
 
 interface ICardComponent {
   card: IsubTeamCard;
@@ -25,13 +24,15 @@ const CardComponent = (props: ICardComponent) => {
             y: 0,
           }}
           transition={{ duration: 0.3, ease: 'easeOut', delay: 0.2 }}
-          className='col-1'
+          className={`${card.video[0]?.video ? 'col-1' : 'col-1-1'}`}
         >
           <CardColumnOne card={card} />
         </motion.div>
-        <div className='col-2'>
-          {card.video[0]?.video && <CardColumnTwo card={card} />}
-        </div>
+        {card.video[0]?.video && (
+          <div className='col-2'>
+            <CardColumnTwo card={card} />
+          </div>
+        )}
       </div>
     </div>
   );

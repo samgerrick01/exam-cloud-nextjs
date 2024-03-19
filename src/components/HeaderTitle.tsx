@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { IProps } from '@/src/interface';
 
 interface IHeaderTitle {

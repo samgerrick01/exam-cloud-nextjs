@@ -42,8 +42,6 @@
   }
 
   > .content-selector {
-    display: flex;
-
     > .mobile {
       display: none;
       justify-content: center;
@@ -65,6 +63,7 @@
     display: none;
     justify-content: center;
     margin-top: 8px;
+    width: 100%;
 
     @include mobile {
       display: flex;
@@ -77,7 +76,7 @@
       font-family: var(--font-sky-text);
       font-weight: 500;
       font-size: 18px;
-      width: 70%;
+      width: 96%;
       font-size: 18px;
       line-height: 24.3px;
       display: flex;

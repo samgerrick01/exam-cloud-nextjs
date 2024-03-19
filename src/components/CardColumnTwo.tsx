@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import YouTube, { YouTubeProps } from 'react-youtube';
 
 import { IsubTeamCard } from '../interface';
@@ -26,13 +25,7 @@ const CardColumnTwo = (props: ICardColumnTwo) => {
     },
   };
 
-  return (
-    ref.url && (
-      <div style={{ width: '100%', height: '100%' }}>
-        <YouTube videoId={videoId} opts={opts} />
-      </div>
-    )
-  );
+  return ref.url && <YouTube videoId={videoId} opts={opts} />;
 };
 
 export default CardColumnTwo;
