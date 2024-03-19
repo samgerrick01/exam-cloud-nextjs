@@ -1,0 +1,9 @@
+@import './cardComponent.scss';
+@import './teamSelector.scss';
+@import './headerTitle.scss';
+@import './variables.scss';
+
+:root {
+  background: $background;
+  color: $primary;
+}

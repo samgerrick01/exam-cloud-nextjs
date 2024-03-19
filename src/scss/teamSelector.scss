@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+.teamSelector-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  > .selector-container {
+    display: flex;
+    flex-direction: row;
+
+    > .titleSelector {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+
+      > .title {
+        border: 1px solid $primary;
+        padding: 4px 12px 4px 12px;
+        border-radius: 8px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
