@@ -44,7 +44,6 @@ const TeamSelector = (props: ITeamSelector) => {
         <button
           onClick={() => {
             setModalOpen(true);
-            console.log('clicked');
           }}
           className='btn'
         >
@@ -60,9 +59,14 @@ const TeamSelector = (props: ITeamSelector) => {
       />
 
       <div className='content-selector'>
-        {selectedTitle !== 'Select a sub-team' && (
+        <div className='mobile'>
+          {selectedTitle !== 'Select a sub-team' && (
+            <CardComponent card={selectedCard} />
+          )}
+        </div>
+        <div className='desktop'>
           <CardComponent card={selectedCard} />
-        )}
+        </div>
       </div>
     </div>
   );

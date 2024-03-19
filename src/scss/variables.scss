@@ -31,25 +31,13 @@ $primary: #555555;
 }
 
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin largeDesktop {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
-
-@mixin extraLargeDesktop {
-  @media (min-width: 1920px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }

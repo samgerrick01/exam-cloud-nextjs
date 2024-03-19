@@ -7,9 +7,9 @@
 
   > .selector-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    word-wrap: break-word;
     gap: 16px;
 
     @include mobile {
@@ -43,20 +43,31 @@
 
   > .content-selector {
     display: flex;
-    justify-content: center;
 
-    // @include mobile {
-    //   display: none;
-    // }
+    > .mobile {
+      display: none;
+      justify-content: center;
+      @include mobile {
+        display: flex;
+      }
+    }
+
+    > .desktop {
+      display: flex;
+      justify-content: center;
+      @include mobile {
+        display: none;
+      }
+    }
   }
 
   > .mobile-selector {
-    display: flex;
+    display: none;
     justify-content: center;
     margin-top: 8px;
 
-    @include tablet {
-      display: none;
+    @include mobile {
+      display: flex;
     }
 
     > .btn {
