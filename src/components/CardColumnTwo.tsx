@@ -22,7 +22,7 @@ const CardColumnTwo = (props: ICardColumnTwo) => {
       width='99.5%'
       height='99%'
       src={src}
-      title='YouTube video player'
+      title={ref.title}
       allowFullScreen
       allow='autoplay; encrypted-media; picture-in-picture'
     />
