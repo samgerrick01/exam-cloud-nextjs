@@ -1,7 +1,5 @@
 'use client';
 
-import YouTube, { YouTubeProps } from 'react-youtube';
-
 import { IsubTeamCard } from '../interface';
 
 interface ICardColumnTwo {
@@ -17,16 +15,18 @@ const CardColumnTwo = (props: ICardColumnTwo) => {
     videoId = videoId.substring(0, ampersandPosition);
   }
 
-  const opts: YouTubeProps['opts'] = {
-    width: '100%',
-    height: '450px',
-    playerVars: {
-      controls: 0,
-      autoplay: 0,
-    },
-  };
+  const src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
-  return ref.url && <YouTube videoId={videoId} opts={opts} />;
+  return (
+    <iframe
+      width='99.5%'
+      height='99%'
+      src={src}
+      title='YouTube video player'
+      allowFullScreen
+      allow='autoplay; encrypted-media; picture-in-picture'
+    />
+  );
 };
 
 export default CardColumnTwo;
