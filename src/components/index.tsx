@@ -4,6 +4,7 @@ import TeamSelector from './TeamSelector';
 import Selector from './Selector';
 import CardColumnOne from './CardColumnOne';
 import CardColumnTwo from './CardColumnTwo';
+import SelectorModal from './SelectorModal';
 
 export {
   HeaderTitle,
@@ -12,4 +13,5 @@ export {
   Selector,
   CardColumnOne,
   CardColumnTwo,
+  SelectorModal,
 };

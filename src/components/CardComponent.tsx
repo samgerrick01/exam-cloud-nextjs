@@ -11,8 +11,6 @@ interface ICardComponent {
 const CardComponent = (props: ICardComponent) => {
   const { card } = props;
 
-  console.log('card', card);
-
   return (
     <div className='card-container'>
       <div className='card-content'>
@@ -20,7 +18,7 @@ const CardComponent = (props: ICardComponent) => {
           <CardColumnOne card={card} />
         </div>
         <div className='col-2'>
-          <CardColumnTwo card={card} />
+          {card.video[0]?.video && <CardColumnTwo card={card} />}
         </div>
       </div>
     </div>

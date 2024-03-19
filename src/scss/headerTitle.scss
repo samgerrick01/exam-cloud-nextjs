@@ -3,6 +3,7 @@
 .headerContainer {
   display: flex;
   justify-content: center;
+
   > .headerTitle {
     display: flex;
     flex-direction: column;
@@ -16,6 +17,11 @@
       font-weight: 400;
       line-height: 96px;
       text-align: center;
+
+      @include mobile {
+        font-size: 40px;
+        line-height: 44px;
+      }
 
       > span {
         @include bg-gradient();
@@ -31,6 +37,10 @@
       font-weight: 400;
       line-height: 24px;
       text-align: center;
+
+      @include mobile {
+        padding: 0 16px 0 16px;
+      }
     }
   }
 }
