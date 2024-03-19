@@ -22,6 +22,7 @@ const CardColumnTwo = (props: ICardColumnTwo) => {
     height: '450px',
     playerVars: {
       controls: 0,
+      autoplay: 0,
     },
   };
 

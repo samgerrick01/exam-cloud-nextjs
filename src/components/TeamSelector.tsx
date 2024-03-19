@@ -18,12 +18,15 @@ const TeamSelector = (props: ITeamSelector) => {
 
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
+  const [play, setPlay] = useState<boolean>(false);
+
   const [selectedTitle, setSelectedTitle] =
     useState<string>('Select a sub-team');
 
   const handleSelected = (index: number) => {
     setSelected(index);
     setSelectedCard(subTeamCard[index]);
+    setPlay(false);
   };
 
   return (
@@ -61,11 +64,11 @@ const TeamSelector = (props: ITeamSelector) => {
       <div className='content-selector'>
         <div className='mobile'>
           {selectedTitle !== 'Select a sub-team' && (
-            <CardComponent card={selectedCard} />
+            <CardComponent card={selectedCard} play={play} setPlay={setPlay} />
           )}
         </div>
         <div className='desktop'>
-          <CardComponent card={selectedCard} />
+          <CardComponent card={selectedCard} play={play} setPlay={setPlay} />
         </div>
       </div>
     </div>
