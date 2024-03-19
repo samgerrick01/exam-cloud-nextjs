@@ -41,3 +41,9 @@ $primary: #555555;
     @content;
   }
 }
+
+@mixin desktopUp {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
